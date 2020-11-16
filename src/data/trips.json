@@ -1,0 +1,26 @@
+[
+  {
+    "img": "../assets/images/travel-1.jpg",
+    "alt": "Man Walking on Desert",
+    "name": "Man Walking on Desert",
+    "button": "View Destination"
+  },
+  {
+    "img": "../assets/images/travel-2.jpg",
+    "alt": "Canoe Water",
+    "name": "Canoe Water",
+    "button": "View Destination"
+  },
+  {
+    "img": "../assets/images/travel-3.jpg",
+    "alt": "Aerial View of Mountain",
+    "name": "Aerial View of Mountain",
+    "button": "View Destination"
+  },
+  {
+    "img": "../assets/images/travel-4.jpg",
+    "alt": "White Boats",
+    "name": "White Boats",
+    "button": "View Destination"
+  }
+]
