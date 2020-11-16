@@ -1,17 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import { FaBars } from "react-icons/fa"
+import { FaBars, FaTimes } from "react-icons/fa"
 import { menuData } from "../data/MenuData"
 import { Button } from "./Button"
 import { useState } from "react"
 
 const Header = () => {
-  const [show, setShow] = useState(false)
+  const [showLinks, setShowLinks] = useState(false)
+
+  const toggleLinks = () => {
+    setShowLinks(!showLinks)
+  }
   return (
     <Nav>
-      <NavLink to="/">Explore</NavLink>
-      <Bars />
+      <Title to="/">Explore</Title>
+      <Bars onClick={toggleLinks} />
+
       <NavMenu>
         {menuData.map((item, index) => (
           <NavLink to={item.link} key={index}>
@@ -19,6 +24,7 @@ const Header = () => {
           </NavLink>
         ))}
       </NavMenu>
+
       <NavBtn>
         <Button to="/trips" primary="true" round="true">
           Book a Flight
@@ -39,6 +45,17 @@ const Nav = styled.nav`
   z-index: 100;
   position: relative;
 `
+
+const Title = styled.h1`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+`
+
 const NavLink = styled(Link)`
   color: #fff;
   display: flex;
@@ -47,6 +64,11 @@ const NavLink = styled(Link)`
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: grid;
+    text-align: center;
+  }
 `
 const Bars = styled(FaBars)`
   display: none;
