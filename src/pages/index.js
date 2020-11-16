@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Hero from "../components/Hero"
 import Trips from "../components/Trips"
 import { Helmet } from "react-helmet"
+import Testimonials from "../components/Testimonials"
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +16,8 @@ const IndexPage = () => (
       />
     </Helmet>
     <Hero />
-    <Trips />
+    <Trips heading="Our Favourite Destinations" />
+    <Testimonials />
   </Layout>
 )
 
