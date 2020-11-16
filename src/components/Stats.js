@@ -63,7 +63,7 @@ const Icon = styled.div`
 
 const Title = styled.p`
   font-weight: 500;
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-bottom: 0.5rem;
 `
 

@@ -4,8 +4,10 @@ import styled from "styled-components"
 import { FaBars } from "react-icons/fa"
 import { menuData } from "../data/MenuData"
 import { Button } from "./Button"
+import { useState } from "react"
 
 const Header = () => {
+  const [show, setShow] = useState(false)
   return (
     <Nav>
       <NavLink to="/">Explore</NavLink>
